@@ -1,5 +1,5 @@
 FROM node:8.9.3
-LABEL maintainer="dcunniff@gmail.com"  nodeVersion="8.9.3" version="2.0.0"
+LABEL maintainer="dcunniff@gmail.com"  nodeVersion="8.9.3" version="2.0.0.1"
 LABEL description="Basic Docker image with Node, Python3, AWS CLI, and sceptre"
 
 # apt-get must be updated first
@@ -10,8 +10,12 @@ LABEL description="Basic Docker image with Node, Python3, AWS CLI, and sceptre"
 RUN apt-get update \
     && apt-get install python3-dev python3-pip -y
 RUN pip3 install awscli
-RUN pip3 install sceptre
 
+RUN pip3 install sceptre
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
+
+ 
 RUN npm i -g yarn@v1.3.2
 
 CMD ["/bin/bash"]
