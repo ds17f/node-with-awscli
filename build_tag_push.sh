@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TAG=2.0.0.1
+TAG=2.0.0.2
 REPO=damiansilbergleithcunniff/node-with-awscli
 COMMIT=`git rev-parse HEAD`
 
