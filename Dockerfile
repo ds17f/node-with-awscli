@@ -1,5 +1,5 @@
 FROM node:12.13.1
-LABEL maintainer="dcunniff@gmail.com"  nodeVersion="12.13.1" version="2.0.0.3"
+LABEL maintainer="dcunniff@gmail.com"  nodeVersion="12.13.1" version="3.0.0"
 LABEL description="Basic Docker image with Node, Python3, AWS CLI, and sceptre"
 
 # apt-get must be updated first
