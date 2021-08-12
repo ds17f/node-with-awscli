@@ -1,5 +1,5 @@
-FROM node:12.13.1
-LABEL maintainer="dcunniff@gmail.com"  nodeVersion="12.13.1" version="3.0.0"
+FROM node:14.17.5
+LABEL maintainer="dcunniff@gmail.com"  nodeVersion="14.17.5" version="4.0.0"
 LABEL description="Basic Docker image with Node, Python3, AWS CLI, and sceptre"
 
 # apt-get must be updated first
@@ -16,8 +16,6 @@ RUN pip3 install sceptre
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
  
-RUN npm i -g yarn@v1.3.2
-
 # need jq for yq
 ENV JQ_VERSION='1.5'
 RUN wget --no-check-certificate https://raw.githubusercontent.com/stedolan/jq/master/sig/jq-release.key -O /tmp/jq-release.key && \
